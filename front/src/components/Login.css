@@ -1,0 +1,107 @@
+.login-form-container {
+    background: linear-gradient(135deg, rgba(110, 110, 110, 0.95), rgba(0, 0, 0, 0.9));
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px; 
+    width: 90%; /* Responsivo */
+    position: relative;
+    z-index: 10; /* Garante que o formulário fique acima da abelha */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-title {
+    font-family: 'Baloo 2', cursive;
+    font-size: 2.5em;
+    color: #ffae18; /* Dourado da abelha */
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.login-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    color: #fffefe;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.login-form {
+    width: 100%;
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+.input-group input:focus {
+    border-color:  #FF9A3C;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+}
+
+/* Substitua o estilo do .login-button e .google-btn por este */
+.login-button {
+    background-color: #ffb909;
+    box-shadow: 0 0 2px #ffef14, 0 0 3px #ffef14, 0 0 5px #ffef14;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 10px;
+    display: flex; /* Adicionado para alinhar o logo */
+    justify-content: center; /* Adicionado para alinhar o logo */
+    align-items: center; /* Adicionado para alinhar o logo */
+    gap: 15px; /* Adicionado para espaçar o logo */
+}
+
+.login-button:hover {
+    background-color: #FFD700;
+    transform: translateY(-2px);
+}
+
+/* O botão do google herda os estilos e só muda o fundo e a cor */
+.google-btn {
+    background-color: #ffffff;
+    color: #444;
+    border: 1px solid #ddd;
+    box-shadow: none; /* Remove o brilho amarelo */
+}
+.google-btn:hover {
+    background-color: #f8f8f8;
+}
+
+.google-btn img {
+    width: 20px;
+    height: 20px;
+}
