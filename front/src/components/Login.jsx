@@ -4,7 +4,9 @@ import './Login.css';
 
 function Login() {
   const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:3001/auth/google";
+    //window.location.href = "http://localhost:3001/auth/google";
+    //PARA RODAR LOCAL, descomente a linha de cima e comente a linha de baixo
+    window.location.href = "/auth/logout";
   };
 
   return (

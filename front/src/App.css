@@ -1,4 +1,3 @@
-/* src/App.css */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Poppins:wght@400;600&display=swap');
 
 body {
@@ -9,19 +8,18 @@ body {
   overflow: hidden; /* Evita scroll indesejado */
 }
 
-/* Container principal para o layout de duas colunas */
 .main-layout-container {
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-color: #e0f2f7; /* Cor de fundo suave */
+  background-color: #e0f2f7;
 }
 
-/* Painel Esquerdo: Abelha 3D e Frase */
+
 .left-panel {
-  flex: 1; /* Ocupa metade do espaço */
+  flex: 1; 
   display: flex;
-  flex-direction: column; /* Conteúdo em coluna */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #2492CF, #11202C);
@@ -31,19 +29,19 @@ body {
 
 .bee-3d-wrapper {
   width: 100%;
-  height: 70%; /* Ocupa 60% da altura do painel, empurrando a abelha para cima */
+  height: 70%; 
   position: absolute;
-  top: -10%; /* Sobe um pouco para a abelha "vazar" para fora */
+  top: -10%;
   left: 0;
   pointer-events: none;
 }
 
 .motto-text {
   position: absolute;
-  bottom: 10%; /* Posição da frase */
+  bottom: 10%;
   text-align: center;
   color: white;
-  z-index: 5; /* Garante que o texto fique acima da abelha */
+  z-index: 5;
   max-width: 80%;
 }
 
@@ -62,13 +60,12 @@ body {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
-/* Painel Direito: Formulário de Login */
 .right-panel {
-  flex: 1; /* Ocupa a outra metade do espaço */
+  flex: 1; 
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1b1b1b; /* Fundo mais claro para o formulário */
+  background-color: #1b1b1b; 
 }
 
 .loading-screen {
@@ -88,12 +85,11 @@ body {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 1rem;
-    background-color: #d9534f; /* Vermelho */
+    background-color: #d9534f;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-
 /* Adicione aqui qualquer fonte que você queira usar */
 /* @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Poppins:wght@400;600&display=swap'); */
