@@ -11,9 +11,9 @@ function App() {
   useEffect(() => {
     const checkLoginStatus = async () => {
       try {
-        //const response = await fetch("http://localhost:3001/api/user/me", { credentials: 'include' });
+        const response = await fetch("http://localhost:3001/api/user/me", { credentials: 'include' });
         //PARA RODAR LOCAL, descomente a linha de cima e comente a linha de baixo
-        const response = await fetch("/api/user/me", { credentials: 'include' });
+        //const response = await fetch("/api/user/me", { credentials: 'include' });
         const data = await response.json();
         if (data.success) {
           setUser(data.user);
@@ -29,9 +29,9 @@ function App() {
 
   const handleLogout = () => {
     setUser(null);
-    //window.location.href = "http://localhost:3001/auth/logout";
+    window.location.href = "http://localhost:3001/auth/logout";
     //PARA RODAR LOCAL, descomente a linha de cima e comente a linha de baixo
-    window.location.href = "/auth/logout";
+    //window.location.href = "/auth/logout";
   };
 
   if (loading) {

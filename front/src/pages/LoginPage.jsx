@@ -1,13 +1,10 @@
-// src/pages/LoginPage.jsx
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import Login from '../components/Login';
-import '../App.css'; // Usando estilos globais
+import '../App.css';
 
-// Componente para o modelo 3D (pode ficar no mesmo arquivo para simplicidade)
 function BeeModel() {
-  // ATENÇÃO: Verifique se o nome do arquivo é bee.glb ou duck.glb
   const { scene } = useGLTF('/models/duck.glb'); 
   return <primitive object={scene} scale={1.5} />;
 }
@@ -24,7 +21,7 @@ function LoginPage() {
             <Suspense fallback={null}>
               <BeeModel />
             </Suspense>
-            <OrbitControls autoRotate autoRotateSpeed={0.5} enableZoom={false} enablePan={false} />
+            <OrbitControls autoRotate autoRotateSpeed={0.5} enablePan={false} />
           </Canvas>
         </div>
         <div className="motto-text">

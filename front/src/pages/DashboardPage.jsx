@@ -1,34 +1,50 @@
-// src/pages/DashboardPage.jsx
-
 import React from 'react';
-import './DashboardPage.css'; // Vamos criar este estilo
+import BuildingScene from '../components/BuildingScene';
+import './DashboardPage.css';
 
 function DashboardPage({ user, onLogout }) {
+  const queenBee = {
+    name: user.displayName, 
+    photo: user.photos[0].value,
+    class: "6ºC",
+    achievement: "Maior pontuador em 'Zunzuns' esta semana!"
+  };
+
   return (
-    <div className="dashboard-container">
-      
-      {/* O NOVO BANNER DE BOAS-VINDAS */}
-      <header className="welcome-banner">
-        <div className="welcome-text">
-          <img src={user.photos[0].value} alt="Foto de perfil" className="profile-pic"/>
-          <div className="text-content">
-            <h2>Bem-vindo(a) de volta, {user.displayName}!</h2>
-            <p>Felizes em te ver na colmeia novamente.</p>
-          </div>
+    <div className="dashboard-container">   
+      <header className="dashboard-header">
+        <h2 className="dashboard-title">Painel Principal</h2>
+        <div className="action-buttons-header">
+          <button className="action-btn">🐝 Compartilhar Zunzum</button>
+          <button className="action-btn">🏘️ Ver Colmeias</button>
+          <button className="action-btn">📚 Aulas</button>
+          <button className="action-btn">🍯 Dar Néctar</button>
+          <button className="action-btn">👑 Abelha Rainha da Semana</button>
+          <button className="action-btn">📝 Conteúdo de Prova</button>
         </div>
         <button onClick={onLogout} className="logout-button">Sair</button>
       </header>
-      
-      <main className="dashboard-main">
-        <h3>O que você quer fazer hoje?</h3>
-        <div className="action-grid">
-          {/* Usando os nomes temáticos com ícones */}
-          <div className="action-card"><span>🐝</span> Compartilhar um Zunzum</div>
-          <div className="action-card"><span>🍯</span> Dar Néctar</div>
-          <div className="action-card"><span>🏘️</span> Ver Colmeias</div>
-          <div className="action-card"><span>👑</span> Abelha Rainha da Semana</div>
-          <div className="action-card"><span>📚</span> Ver Aulas Anteriores</div>
-          <div className="action-card"><span>📝</span> Conteúdo de Prova</div>
+
+      <main className="dashboard-main-content">
+        {/* Hub Central com o Prédio 3D */}
+        <div className="main-hub">
+          <div className="hub-title">Centro Criativo</div>
+          <BuildingScene />
+        </div>
+
+        {/* Card da Abelha Rainha da Semana */}
+        <div className="queen-bee-card">
+            <div className="queen-bee-header">
+                <h3>👑 Abelha Rainha da Semana</h3>
+            </div>
+            <div className="queen-bee-profile">
+                <img src={queenBee.photo} alt={`Foto de ${queenBee.name}`} className="profile-pic" />
+                <h4>{queenBee.name}</h4>
+                <p className="class-info">Turma {queenBee.class}</p>
+            </div>
+            <div className="queen-bee-achievement">
+                <p>"{queenBee.achievement}"</p>
+            </div>
         </div>
       </main>
     </div>
