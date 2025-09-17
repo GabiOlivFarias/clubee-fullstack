@@ -1,5 +1,6 @@
 import React from 'react';
 import BuildingScene from '../components/BuildingScene';
+import { Link } from 'react-router-dom'; 
 import './DashboardPage.css';
 
 function DashboardPage({ user, onLogout }) {
@@ -15,24 +16,22 @@ function DashboardPage({ user, onLogout }) {
       <header className="dashboard-header">
         <h2 className="dashboard-title">Painel Principal</h2>
         <div className="action-buttons-header">
-          <button className="action-btn">🐝 Compartilhar Zunzum</button>
-          <button className="action-btn">🏘️ Ver Colmeias</button>
+          <button className="action-btn">🐝 Zunzum</button>
+          <Link to="/colmeias" className="action-btn" style={{textDecoration: 'none'}}>
+                        🏘️ Ver Colmeias
+          </Link>
           <button className="action-btn">📚 Aulas</button>
-          <button className="action-btn">🍯 Dar Néctar</button>
           <button className="action-btn">👑 Abelha Rainha da Semana</button>
-          <button className="action-btn">📝 Conteúdo de Prova</button>
         </div>
         <button onClick={onLogout} className="logout-button">Sair</button>
       </header>
 
       <main className="dashboard-main-content">
-        {/* Hub Central com o Prédio 3D */}
         <div className="main-hub">
           <div className="hub-title">Centro Criativo</div>
           <BuildingScene />
         </div>
 
-        {/* Card da Abelha Rainha da Semana */}
         <div className="queen-bee-card">
             <div className="queen-bee-header">
                 <h3>👑 Abelha Rainha da Semana</h3>
