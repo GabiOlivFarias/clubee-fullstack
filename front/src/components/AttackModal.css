@@ -1,0 +1,98 @@
+.modal-overlay {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); 
+    z-index: 1000;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.attack-modal {
+    background-color: #fff; 
+    color: #333; 
+    padding: 30px;
+    border-radius: 20px; 
+    width: 90%; 
+    max-width: 600px; 
+    text-align: center;
+}
+
+.battle-arena { 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    margin: 20px 0; 
+}
+
+.combatant { 
+    padding: 20px; 
+    border-radius: 10px;
+     width: 40%; 
+}
+
+.combatant h3 { 
+    margin-top: 0; 
+}
+
+.attacker { 
+    background-color: #e7f3ff;
+    border: 2px solid var(--azul-suave, #3A86FF);
+}
+
+.defender { 
+    background-color: #ffebee; 
+    border: 2px solid #e74c3c;
+}
+
+.vs-icon { 
+    font-size: 3rem; 
+}
+
+.launch-attack-btn {
+    background-color: #e74c3c; 
+    color: white; 
+    padding: 15px 30px;
+    border: none; 
+    border-radius: 10px; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    cursor: pointer;
+}
+
+.spinner {
+    width: 50px; 
+    height: 50px; 
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--azul-suave, #3A86FF);
+    border-radius: 50%; 
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes 
+spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+.result-screen h2 { 
+    font-size: 2.5rem; 
+    margin: 0; 
+}
+
+.result-screen .result-icon { 
+    font-size: 4rem; 
+    margin: 10px 0; 
+}
+
+.close-result-btn {
+    background-color: #555; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 8px;
+    border: none; 
+    cursor: pointer; 
+    margin-top: 20px; 
+    font-weight: bold;
+}

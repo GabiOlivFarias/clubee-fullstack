@@ -1,0 +1,76 @@
+.detail-container {
+    max-width: 800px; 
+    margin: 20px auto; 
+    padding: 30px; 
+    background-color: #fff; 
+    border-radius: 20px; 
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1); 
+    color: #333; 
+}
+
+.detail-header { 
+    text-align: center; 
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 20px; 
+}
+
+.detail-header h1 { 
+    font-family: 'Baloo 2', cursive; 
+    font-size: 3rem; 
+    margin: 10px 0; 
+}
+
+.detail-stats { 
+    display: flex; 
+    justify-content: center; 
+    gap: 30px; 
+    font-weight: 600; 
+    color: #555;
+}
+
+.detail-members {
+     margin-top: 30px; 
+}
+
+.detail-members ul { 
+    list-style: none; 
+    padding: 0; 
+}
+
+.detail-members li { 
+    background-color: #f8f9fa;
+    padding: 10px; 
+    border-radius: 5px; 
+    margin-bottom: 5px; 
+}
+
+.detail-actions { 
+    margin-top: 30px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+}
+
+.detail-actions button { 
+    padding: 12px 25px; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: transform 0.2s ease; 
+}
+
+.detail-actions button:hover { 
+    transform: scale(1.05); 
+}
+
+.join-btn { 
+    background-color: var(--amarelo-mel, #FFC93C); 
+    color: #222; 
+}
+
+.leave-btn, .attack-btn { 
+    background-color: #e74c3c; 
+    color: white; 
+}
