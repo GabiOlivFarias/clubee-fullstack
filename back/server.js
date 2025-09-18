@@ -1,5 +1,3 @@
-// Dentro de /server/server.js (VERSÃO CORRIGIDA E FINAL)
-
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -37,7 +35,7 @@ passport.use(new GoogleStrategy({
     proxy: true 
   },
   function(accessToken, refreshToken, profile, cb) {
-    // Em um app real, aqui você salvaria ou buscaria o 'profile' no seu banco de dados
+    // Em um app real, aqui a gente salvaria ou buscaria o 'profile' no seu banco de dados
     return cb(null, profile);
   }
 ));
