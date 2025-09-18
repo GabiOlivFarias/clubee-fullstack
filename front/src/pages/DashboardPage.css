@@ -40,7 +40,6 @@
 }
 
 .action-buttons-header .action-btn {
-    padding: 10px 20px;
     font-size: 1rem;
     font-weight: 600;
     color: #fff;
@@ -53,6 +52,23 @@
 .action-buttons-header .action-btn:hover {
     background-color: #2a75e8;
     transform: translateY(-2px);
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.btn-icon {
+    width: 24px;   
+    height: 24px;  
+    color: #ff9e0c;
+    padding: 5px;  
+}
+
+.btn-text {
+    padding: 5px;  
 }
 
 .logout-button {
@@ -163,4 +179,37 @@
     flex-direction: column;
     gap: 5px;
     width: 100%;
+}
+
+@media (max-width: 900px) {
+    .dashboard-main-content {
+        grid-template-columns: 1fr;
+    }
+    .main-hub {
+        height: 50vh; 
+        min-height: 400px;
+    }
+    .dashboard-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .dashboard-title {
+        order: -1;
+    }
+
+
+    .action-buttons-header .btn-text {
+        display: none; 
+    }
+
+    .action-buttons-header .action-btn {
+        justify-content: center;
+        width: 50px; 
+        height: 50px;
+        border-radius: 50%; 
+    }
+    
+    .action-buttons-header .btn-icon {
+        font-size: 1.5rem;
+    }
 }

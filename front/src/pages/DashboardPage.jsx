@@ -1,7 +1,11 @@
 import React from 'react';
-import BuildingScene from '../components/BuildingScene';
-import { Link } from 'react-router-dom'; 
 import './DashboardPage.css';
+import { Link } from 'react-router-dom'; 
+import BuildingScene from '../components/BuildingScene';
+import HoneycombIcon from "../assets/icons/honeycombIcon";
+import ClassesIcon from "../assets/icons/ClassesIcon";
+import BeeIcon from "../assets/icons/BeeIcon";
+import QueenIcon from "../assets/icons/QueenIcon";
 
 function DashboardPage({ user, onLogout }) {
   const queenBee = {
@@ -16,12 +20,23 @@ function DashboardPage({ user, onLogout }) {
       <header className="dashboard-header">
         <h2 className="dashboard-title">Painel Principal</h2>
         <div className="action-buttons-header">
-          <button className="action-btn">🐝 Zunzum</button>
+          <button className="action-btn">
+            <BeeIcon className="btn-icon" />
+            <span className="btn-text">Zunzum</span>
+          </button>
           <Link to="/colmeias" className="action-btn" style={{textDecoration: 'none'}}>
-                        🏘️ Ver Colmeias
+            <HoneycombIcon className="btn-icon" /> 
+            <span className="btn-text">Colmeias</span>
           </Link>
-          <button className="action-btn">📚 Aulas</button>
-          <button className="action-btn">👑 Abelha Rainha da Semana</button>
+          
+          <button className="action-btn">
+            <ClassesIcon className="btn-icon" />
+            <span className="btn-text">Aulas</span>
+          </button>
+          <button className="action-btn">
+            <QueenIcon className="btn-icon" />
+            <span className="btn-text">Abelha Rainha</span>
+          </button>
         </div>
         <button onClick={onLogout} className="logout-button">Sair</button>
       </header>

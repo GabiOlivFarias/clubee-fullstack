@@ -5,7 +5,7 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden; /* Evita scroll indesejado */
+  overflow: hidden;
 }
 
 .main-layout-container {
@@ -24,7 +24,7 @@ body {
   align-items: center;
   background: linear-gradient(135deg, #2492CF, #11202C);
   position: relative;
-  overflow: hidden; /* Garante que a abelha não vaze */
+  overflow: hidden; 
 }
 
 .bee-3d-wrapper {
@@ -91,5 +91,38 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-/* Adicione aqui qualquer fonte que você queira usar */
-/* @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Poppins:wght@400;600&display=swap'); */
+
+@media (max-width: 800px) {
+  
+  body {
+    overflow: auto;
+  }
+
+  .main-layout-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .left-panel {
+    flex-basis: 450px; 
+    min-height: 450px;
+  }
+
+  .bee-3d-wrapper {
+    height: 60%;
+    top: 0;
+  }
+  .motto-text {
+    position: absolute; 
+    bottom: 10%;
+  }
+  .motto-text h1 { font-size: 2.5em; }
+  .motto-text p { font-size: 1.1em; }
+
+
+  .right-panel {
+    flex-basis: auto;
+    padding: 40px 20px;
+    background-color: #1f1e1e; 
+  }
+}

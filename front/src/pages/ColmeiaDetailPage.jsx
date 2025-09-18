@@ -15,7 +15,7 @@ function ColmeiaDetailPage({ communities, currentUser, onJoin, onLeave, onOpenAt
 
   return (
     <div className="detail-container">
-      <Link to="/colmeias" className="back-button">← Voltar para todas as Colmeias</Link>
+      <Link to="/colmeias" className="back-button">← Voltar</Link>
       <div className="detail-header">
         <h1>{community.name}</h1>
         <div className="detail-stats">
