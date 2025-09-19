@@ -36,7 +36,8 @@ function App() {
   useEffect(() => {
     const checkLoginStatus = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/user/me", { credentials: 'include' });
+        //const response = await fetch("http://localhost:3001/api/user/me", { credentials: 'include' });
+         const response = await fetch("/api/user/me", { credentials: 'include' }); 
         const data = await response.json();
         if (data.success) {
           setUser(data.user);
@@ -53,7 +54,8 @@ function App() {
 
   const handleLogout = () => {
     setUser(null);
-    window.location.href = "http://localhost:3001/auth/logout";
+    //window.location.href = "http://localhost:3001/auth/logout";
+    window.location.href = "/auth/logout"; 
   };
   
   const handleCreateCommunity = (name) => {
