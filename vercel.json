@@ -9,6 +9,5 @@
             "source": "/api/(.*)",
             "destination": "/front/index.html"     
         }
-    ],
-    "rootDirectory": "front"
+    ]
 }
