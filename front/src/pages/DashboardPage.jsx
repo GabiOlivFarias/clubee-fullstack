@@ -2,7 +2,7 @@ import React from 'react';
 import './DashboardPage.css';
 import { Link } from 'react-router-dom'; 
 import BuildingScene from '../components/BuildingScene';
-import HoneycombIcon from "../assets/icons/honeycombIcon";
+//import HoneycombIcon from "../assets/icons/honeycombIcon";
 import ClassesIcon from "../assets/icons/ClassesIcon";
 import BeeIcon from "../assets/icons/BeeIcon";
 import QueenIcon from "../assets/icons/QueenIcon";
@@ -25,7 +25,7 @@ function DashboardPage({ user, onLogout }) {
             <span className="btn-text">Zunzum</span>
           </button>
           <Link to="/colmeias" className="action-btn" style={{textDecoration: 'none'}}>
-            <HoneycombIcon className="btn-icon" /> 
+            🍯
             <span className="btn-text">Colmeias</span>
           </Link>
           
